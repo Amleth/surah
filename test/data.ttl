@@ -1,3 +1,58 @@
 @base <http://data-iremus.huma-num.fr/id/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+# SHERLOCK
+
+<f122c08a-5084-4a94-80ed-019102976309>
+    a crm:E55_Type ;
+    crm:P1_is_identified_by "Projet analytique"@fr ;
+    .
+
+<cc909242-ee52-4419-b404-17bd96c0fda4>
+    a crm:E55_Type ;
+    crm:P1_is_identified_by "Corpus"@fr ;
+    .
+
+<19073c4a-0ef7-4ac4-a51a-e0810a596773>
+    a crm:E55_Type ;
+    crm:P1_is_identified_by "Identifiant IIIF version 3.0" ;
+  .
+
+# PROJECT
+
+<9fb3f261-584d-4b13-b088-5ad1e3be0bbf>
+    a crm:E7_Activity ;
+    crm:P2_has_type <f122c08a-5084-4a94-80ed-019102976309> ;
+    crm:crm:P16_used_specific_object <4fd02138-5406-4757-ae31-10ec61de5291> ;
+    .
+
+<4fd02138-5406-4757-ae31-10ec61de5291>
+    a crm:E1_Entity ;
+    crm:P2_has_type <cc909242-ee52-4419-b404-17bd96c0fda4> ;
+    .
+
+# ITEMS
+
+<7bc5e59b-7d9d-4b5d-ab76-db3d4c11251e>
+    a crm:E36_Visuel_Item ;
+    crm:P1_is_identified_by <6366ceca-f9a3-44de-9d84-66139f458388> ;
+    .
+
+<6366ceca-f9a3-44de-9d84-66139f458388>
+    a crm:E42_Identifier ;
+    crm:P2_has_type <19073c4a-0ef7-4ac4-a51a-e0810a596773> ;
+    crm:P190_has_symbolic_content <https://media.getty.edu/iiif/image/e5d29650-11f8-4897-9540-54a9dd65b04f/full/max/0/default.jpg> ;
+    .
+    
+<81ef733c-ae35-42fa-af82-33e3f34aeec5>
+    a crm:E36_Visuel_Item ;
+    crm:P1_is_identified_by <7ed99d88-422c-486c-9c37-aa0f8819b529> ;
+    .
+
+<7ed99d88-422c-486c-9c37-aa0f8819b529>
+    a crm:E42_Identifier ;
+    crm:P2_has_type <19073c4a-0ef7-4ac4-a51a-e0810a596773> ;
+    crm:P190_has_symbolic_content <https://stacks.stanford.edu/image/iiif/sr294cr5852/sr294cr5852_00_0001/full/max/0/default.jpg> ;
+    .
